@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .left-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .left-section img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.navbar .right-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar .menu li {
+    font-size: 16px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar .menu li a:hover {
+    color: #007bff;
+}
+
+.navbar .search-box {
+    position: relative;
+}
+
+.navbar .search-box input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.navbar .notification {
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+   
+}
+.navbar .notification img{
+    width: 30px;
+    height: 30px;
+}
+
+
+/*Corosel*/
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-height: 50%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.carousel__slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel__slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.carousel__slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel__control {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel__control:checked {
+    background-color: #555;
+}
+
+

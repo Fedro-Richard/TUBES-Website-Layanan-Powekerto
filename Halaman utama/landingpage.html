@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart City Powerkerto</title>
+  <link rel="stylesheet" href="landingpagestyle.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <header>
+    <nav class="navbar bg-[#1F509A] text-white p-4">
+      <div class="left-section">
+          <a href="/TUGASBESAR_MUHAMMADFITRAALHADI.login/TUGASBESAR_MUHAMMADFITRAALHADI.login/index.html"><img src="/img/images.jpg" alt="Profile"></a>
+          <div class="notification">
+            <img src="/img/Frame.png">
+          </div>
+          
+      </div>
+      <ul class="flex space-x-6">
+          <li><a href="/Halaman utama/landingpage.html" class="hover:text-red-500">Berada</a></li>
+          <li><a href="/Halaman news/news.html" class="hover:text-red-500">Berita</a></li>
+          <li><a href="/Halaman feedback/indikatorfeedback.html" class="hover:text-red-500">Umpan Balik</a></li>
+          <li><a href="/halaman report/report.html" class="hover:text-red-500">Laporan</a></li>
+      </ul>
+      <div class="right-section">
+          
+          <div class="search-box">
+              <input type="text" placeholder="Cari ...">
+          </div>
+      </div>
+  </nav>
+
+  </header>
+    <!--Navbar-->
+    
+  <!--Corosel-->
+  <div class="carousel">
+    <div class="carousel__slides" id="carouselSlides">
+        <div class="carousel__slide"><img src="/img/WhatsApp Image 2024-12-30 at 07.44.48_77a3904a.jpg" alt="Slide 1"></div>
+        <div class="carousel__slide"><img src="/img/WhatsApp Image 2024-12-30 at 07.45.15_1cbc3c98.jpg" alt="Slide 2"></div>
+        <div class="carousel__slide"><img src="/Halaman utama/61d693d6b0c6f.jpeg" alt="Slide 3"></div>
+    </div>
+    <div class="carousel__controls">
+        <input type="radio" name="carousel" class="carousel__control" value="0" checked>
+        <input type="radio" name="carousel" class="carousel__control" value="1">
+        <input type="radio" name="carousel" class="carousel__control" value="2">
+    </div>
+</div>
+
+<!--Indikator-->
+<div class="indikator">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    
+        <div class="bg-white p-6 rounded-lg shadow-md ">
+          <h3 class="text-lg font-semibold text-gray-700">Jumlah Rumah Sakit Umum </h3>
+          <div class="flex items-center mt-4">
+            <p class="text-3xl font-bold text-gray-900">9</p>
+            <span class="text-green-500 flex items-center ml-2">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 11l4-4 4 4H5z" />
+              </svg>
+              8%
+            </span>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">Data terakhir diperbarui 1 minggu yang lalu</p>
+        </div>
+      
+        <!-- New Orders -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold text-gray-700">Jumlah Penduduk</h3>
+          <div class="flex items-center mt-4">
+            <p class="text-3xl font-bold text-gray-900">724.513 Jiwa</p>
+            <span class="text-red-500 flex items-center ml-2">
+              <svg class="h-5 w-5 transform rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 11l4-4 4 4H5z" />
+              </svg>
+              10%
+            </span>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">Data terakhir diperbarui 1 minggu yang lalu</p>
+        </div>
+      
+        <!-- Avg. Order Revenue -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold text-gray-700">Jumlah Tempat Wisata Terkenal </h3>
+          <div class="flex items-center mt-4">
+            <p class="text-3xl font-bold text-gray-900">10 tempat wisata</p>
+            <span class="text-green-500 flex items-center ml-2">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 11l4-4 4 4H5z" />
+              </svg>
+            </span>
+            9%
+          </div>
+          <p class="text-sm text-gray-500 mt-2">Data terakhir diperbarui 1 minggu yang lalu</p>
+        </div>
+      </div>
+</div>
+
+<!-- Dasboard-->
+<div class="flex bg-gray-100 p-6">
+    <div class="container mx-auto ">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
+       
+        <div class="bg-white rounded-lg shadow-md flex flex-col items-center justify-center p-4">
+          <h3 class="text-2xl font-semibold text-gray-700 mb-4">Tingkat Wisatawan </h3>
+            <canvas id="barChart1" class="w-full h-auto"></canvas>
+        </div>
+      
+        <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+          <h3 class="text-2xl font-semibold text-gray-700 mb-4">Kesehatan</h3>
+          <canvas id="doughnutChart" class="h-48"></canvas>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Layanan -->
+    <article class="text-wrap text-center p-6">
+        <h1 class="text-2xl font-semibold text-gray-700">Pusat Layanan</h1>
+        <p class="text-xl italic font-semibold text-gray-500">
+            "Membawa kemudahan dalam genggaman Anda. Akses informasi, pengajuan, dan bantuan kapan saja, di mana saja."
+        </p>
+    </article>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 px-8">
+
+        <!-- Layanan 1 -->
+        <div class="bg-[#1F509A] p-6 rounded-lg shadow-md">
+          <div class="flex justify-center items-center">
+              <a href="layanan_rumah_sakit.html" class="transform transition duration-300 hover:scale-105">
+                  <img src="/img/local_hospital_24dp_80C4E9_FILL0_wght400_GRAD0_opsz24.png" alt="Layanan 1" class="w-32 h-32">
+              </a>
+          </div>
+          <h2 class="text-center text-white mt-4">Informasi Rumah Sakit</h2>
+      </div>
+
+      <!-- Layanan 2 -->
+      <div class="bg-[#1F509A] p-6 rounded-lg shadow-md">
+          <div class="flex justify-center items-center">
+              <a href="layanan_tempat_wisata.html" class="transform transition duration-300 hover:scale-105">
+                  <img src="/img/travel_24dp_80C4E9_FILL0_wght400_GRAD0_opsz24.png" alt="Layanan 2" class="w-32 h-32">
+              </a>
+          </div>
+          <h2 class="text-center text-white mt-4">Informasi Tempat Wisata</h2>
+      </div>
+    </div>    
+    
+<!--Footer-->
+<footer class="bg-[#1F509A] text-white py-8">
+  <div class="container mx-auto px-4 text-center">
+    <div class="mb-6">
+      <h1 class="text-white text-lg font-bold uppercase">Powerkerto</h1>
+      <p class="text-sm text-[#B1F0F7]">Smart City</p>
+    </div>
+    <nav class="mb-6">
+      <ul class="flex justify-center space-x-6 text-sm">
+        <li><a href="#" class="hover:text-[#B1F0F7]">Berada</a></li>
+        <li><a href="#" class="hover:text-[#B1F0F7]">Berita</a></li>
+        <li><a href="#" class="hover:text-[#B1F0F7]">Umpan Balik</a></li>
+        <li><a href="#" class="hover:text-[#B1F0F7]">Ulasan</a></li>
+      </ul>
+    </nav>
+    <div class="mb-6 flex justify-center space-x-4">
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-pinterest-p"></i>
+      </a>
+    </div>
+    <p class="text-xs">
+      <!--Taro Alamat-->
+    </p>
+  </div>
+</footer>
+
+<script src="Script.js">
+
+</script>
+</body>
+</html> 

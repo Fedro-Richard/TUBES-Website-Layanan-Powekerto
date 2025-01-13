@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indikatorfeedback.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <nav class="navbar bg-[#1F509A] text-white p-4">
+        <div class="left-section">
+            <a href="/TUGASBESAR_MUHAMMADFITRAALHADI.login/TUGASBESAR_MUHAMMADFITRAALHADI.login/index.html"><img src="/img/images.jpg" alt="Profile"></a>
+            <div class="notification">
+              <img src="/img/Frame.png">
+            </div>
+            
+        </div>
+        <ul class="flex space-x-6">
+          <li><a href="/Halaman utama/landingpage.html" class="hover:text-red-500">Berada</a></li>
+          <li><a href="/Halaman news/news.html" class="hover:text-red-500">Berita</a></li>
+          <li><a href="/Halaman feedback/indikatorfeedback.html" class="hover:text-red-500">Umpan Balik</a></li>
+          <li><a href="/halaman report/report.html" class="hover:text-red-500">Laporan</a></li>
+        </ul>
+        <div class="right-section">
+            
+            <div class="search-box">
+                <input type="text" placeholder="Cari ...">
+            </div>
+        </div>
+    </nav>
+      </header>
+      <div class="bg-gray-900 text-white flex justify-center items-center min-h-screen">
+        <div class="w-full max-w-6xl space-y-6 p-6">
+          <div class="flex space-x-6">
+            <div class="flex-1 bg-gray-300 p-6 rounded-lg shadow-md text-gray-900">
+              <h2 class="text-lg font-semibold mb-4">Silahkan isi form feedback tersebut</h2>
+              <button
+                onclick="window.location.href='/Halaman feedback/feedback.html'"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                Isi Form Feedback
+              </button>
+            </div>
+    
+            <div class="w-1/3 bg-gray-300 p-6 rounded-lg shadow-md text-gray-900">
+              <h2 class="text-lg font-semibold mb-4">Jumlah Feedback Hari Ini</h2>
+              <p id="feedbackCount" class="text-3xl font-bold text-blue-600">25</p>
+            </div>
+          </div>
+      
+          <canvas id="indicatorChart"></canvas>
+        </div>
+    </div>
+     </div>
+
+     <!--Footer-->
+<footer class="bg-[#1F509A] text-white py-8">
+  <div class="container mx-auto px-4 text-center">
+    <div class="mb-6">
+      <h1 class="text-white text-lg font-bold uppercase">Powerkerto</h1>
+      <p class="text-sm text-[#B1F0F7]">Smart City</p>
+    </div>
+    <nav class="mb-6">
+      <ul class="flex justify-center space-x-6 text-sm">
+        <li><a href="#" class="hover:text-[#B1F0F7]">Berada</a></li>
+        <li><a href="#" class="hover:text-[#B1F0F7]">Berita</a></li>
+        <li><a href="#" class="hover:text-[#B1F0F7]">Umpan Balik</a></li>
+        <li><a href="#" class="hover:text-[#B1F0F7]">Ulasan</a></li>
+      </ul>
+    </nav>
+    <div class="mb-6 flex justify-center space-x-4">
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="text-gray-400 hover:text-red-500">
+        <i class="fab fa-pinterest-p"></i>
+      </a>
+    </div>
+    <p class="text-xs">
+      <!--Taro Alamat-->
+    </p>
+  </div>
+</footer>
+     <script src="indicatorfedback.js"></script>
+</body>
+</html>

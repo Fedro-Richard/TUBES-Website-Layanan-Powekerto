@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="stylesheet" href="report.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-[#1F509A] text-white p-4">
+            <div class="left-section">
+                <a href="/TUGASBESAR_MUHAMMADFITRAALHADI.login/TUGASBESAR_MUHAMMADFITRAALHADI.login/index.html"><img src="/img/images.jpg" alt="Profile"></a>
+                <div class="notification">
+                  <img src="/img/Frame.png">
+                </div>
+                
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="/Halaman utama/landingpage.html" class="hover:text-red-500">Berada</a></li>
+                <li><a href="/Halaman news/news.html" class="hover:text-red-500">Berita</a></li>
+                <li><a href="/Halaman feedback/indikatorfeedback.html" class="hover:text-red-500">Umpan Balik</a></li>
+                <li><a href="/halaman report/report.html" class="hover:text-red-500">Laporan</a></li>
+            </ul>
+            <div class="right-section">
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Cari ...">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <h1 class="text-2xl font-bold mb-4">Laporan Tingkat Kepuasan Pengguna Web</h1>
+
+        <!-- Form Kepuasan Pengguna -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-2">Form Tingkat Kepuasan</h2>
+            <form id="satisfaction-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="satisfaction">
+                        Tingkat Kepuasan
+                    </label>
+                    <select id="satisfaction" name="satisfaction"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Pilih Tingkat Kepuasan</option>
+                        <option value="1">1 - Sangat Tidak Puas</option>
+                        <option value="2">2 - Tidak Puas</option>
+                        <option value="3">3 - Netral</option>
+                        <option value="4">4 - Puas</option>
+                        <option value="5">5 - Sangat Puas</option>
+                    </select>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+            <p id="form-message" class="text-green-500 text-sm"></p>
+        </section>
+
+        <!-- Chart Kepuasan Pengguna -->
+        <section>
+            <h2 class="text-xl font-semibold mb-2">Grafik Tingkat Kepuasan</h2>
+            <canvas id="satisfaction-chart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <!--Footer-->
+<footer class="bg-[#1F509A] text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-6">
+        <h1 class="text-white text-lg font-bold uppercase">Powerkerto</h1>
+        <p class="text-sm text-[#B1F0F7]">Smart City</p>
+      </div>
+      <nav class="mb-6">
+        <ul class="flex justify-center space-x-6 text-sm">
+          <li><a href="#" class="hover:text-[#B1F0F7]">Berada</a></li>
+          <li><a href="#" class="hover:text-[#B1F0F7]">Berita</a></li>
+          <li><a href="#" class="hover:text-[#B1F0F7]">Umpan Balik</a></li>
+          <li><a href="#" class="hover:text-[#B1F0F7]">Ulasan</a></li>
+        </ul>
+      </nav>
+      <div class="mb-6 flex justify-center space-x-4">
+        <a href="#" class="text-gray-400 hover:text-red-500">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-red-500">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-red-500">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-red-500">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+      </div>
+      <p class="text-xs">
+        <!--Taro Alamat-->
+      </p>
+    </div>
+  </footer>
+
+    <script src="report.js"></script>
+</body>
+
+</html>

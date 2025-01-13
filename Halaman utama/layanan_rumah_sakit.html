@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Rumah Sakit</title>
+    <link rel="stylesheet" href="landingpagestyle.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-o9N1j7r+0Yh7vC4SM69TZTVld4jP3yNi9wN4Oqt7kPI=" crossorigin="" />
+
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-papvcnY5RkfGH6+ymDZ0Yg9zyQ6qXfybsOqek7WzIuo2WrPCW7x/w5Sw7dj9Zp7gknJjYZp4e6cLOq1w8CSh5g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Styling Peta */
+        #map {
+            width: 100%;
+            height: 500px;
+            /* Sesuaikan tinggi peta */
+            border-radius: 8px;
+            margin-bottom: 24px;
+            /* Spasi bawah peta */
+        }
+
+        @media (max-width: 768px) {
+            #map {
+                height: 300px;
+                /* Tinggi peta untuk perangkat mobile */
+            }
+        }
+
+        /* Hover efek pada daftar rumah sakit - DIHAPUS */
+        /* .hospital-list li:hover {
+            background-color: #f0f0f0;
+            transition: background-color 0.3s;
+        } */
+
+        /* Kursor pointer pada daftar rumah sakit - DIHAPUS */
+        /* .hospital-list li {
+            cursor: pointer;
+        } */
+
+        /* Tambahkan gaya baru jika diperlukan */
+        .hospital-list li {
+            /* Contoh gaya tanpa interaksi */
+            background-color: #ffffff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        /* Optional: Tambahkan efek hover yang tidak mengindikasikan klik */
+        .hospital-list li:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-gray-800 text-white p-4">
+            <div class="left-section">
+                <a href="/TUGASBESAR_MUHAMMADFITRAALHADI.login/TUGASBESAR_MUHAMMADFITRAALHADI.login/index.html"><img src="/img/10.png" alt="Profile"></a>
+                <div class="notification">
+                  <img src="/img/Frame.png">
+                </div>
+                
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="/Halaman utama/landingpage.html" class="hover:text-red-500">Berada</a></li>
+                <li><a href="/Halaman news/news.html" class="hover:text-red-500">Berita</a></li>
+                <li><a href="/Halaman feedback/indikatorfeedback.html" class="hover:text-red-500">Umpan Balik</a></li>
+                <li><a href="/halaman report/report.html" class="hover:text-red-500">Laporan</a></li>
+            </ul>
+            <div class="right-section">
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Cari ...">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Judul Halaman -->
+    <article class="text-wrap text-center p-6">
+        <h1 class="text-3xl font-semibold text-gray-700">Rumah Sakit di Purwokerto</h1>
+        <p class="text-xl italic font-semibold text-gray-500">
+            "Menampilkan lokasi dan informasi rumah sakit di Purwokerto untuk memudahkan akses kesehatan Anda."
+        </p>
+    </article>
+    <!-- Daftar Rumah Sakit dan Peta -->
+    <div class="container mx-auto px-8 py-6">
+        <!-- Peta Kota Purwokerto -->
+      
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Daftar Rumah Sakit di Purwokerto</h2>
+
+        <ul class="space-y-4 hospital-list">
+            <li class="bg-white p-4 rounded shadow" 
+                data-name="RSU Santa Elisabeth Purwokerto">
+                <h3 class="text-xl font-bold">RSU Santa Elisabeth Purwokerto</h3>
+                <p>Alamat: Jl. Santa Elisabeth No. 1, Purwokerto</p>
+                <p>Telepon: (0281) 123456</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.678545704717!2d109.23717317476206!3d-7.416469792593903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e5e4a06c373%3A0x5e572c2abb80a8a6!2sRSU%20Santa%20Elisabeth%20Purwokerto!5e1!3m2!1sid!2sid!4v1735712993274!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+            <li class="bg-white p-4 rounded shadow" 
+                data-name="Rumah Sakit Umum Hermina Purwokerto">
+                <h3 class="text-xl font-bold">Rumah Sakit Umum Hermina Purwokerto</h3>
+                <p>Alamat: Jl. Hermina No. 10, Purwokerto</p>
+                <p>Telepon: (0281) 654321</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.643530255109!2d109.200064074762!3d-7.42056699258988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e165940f50b%3A0x2a2e314152ab2c5f!2sRumah%20Sakit%20Umum%20Hermina%20Purwokerto!5e1!3m2!1sid!2sid!4v1735713289862!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+            <li class="bg-white p-4 rounded shadow" 
+                data-name="RST Wijayakusuma Purwokerto">
+                <h3 class="text-xl font-bold">RST Wijayakusuma Purwokerto</h3>
+                <p>Alamat: Jl. Wijaya Kusuma No. 5, Purwokerto</p>
+                <p>Telepon: (0281) 112233</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.690293260398!2d109.24300527476207!3d-7.415094692595276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e70861b3f8d%3A0x1c3d63e6c0282916!2sRST%20Wijayakusuma%20Purwokerto!5e1!3m2!1sid!2sid!4v1735713365481!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+            <li class="bg-white p-4 rounded shadow" 
+                data-name="RS Ananda Purwokerto">
+                <h3 class="text-xl font-bold">RS Ananda Purwokerto</h3>
+                <p>Alamat: Jl. Ananda No. 20, Purwokerto</p>
+                <p>Telepon: (0281) 445566</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.663101691441!2d109.22141797476199!3d-7.4182771925921305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e67e4209eb7%3A0xc60f72f33706f339!2sRS%20Ananda%20Purwokerto!5e1!3m2!1sid!2sid!4v1735713478107!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+            <li class="bg-white p-4 rounded shadow" 
+                data-name="RSUD Prof. Dr. Margono Soekarjo">
+                <h3 class="text-xl font-bold">RSUD Prof. Dr. Margono Soekarjo</h3>
+                <p>Alamat: Jl. Margono Soekarjo No. 30, Purwokerto</p>
+                <p>Telepon: (0281) 778899</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.4987747300056!2d109.26487737476221!3d-7.43748119257343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655c1da44567c1%3A0xd33981254b97b001!2sRSUD%20Prof.%20Dr.%20Margono%20Soekarjo!5e1!3m2!1sid!2sid!4v1735713497587!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+            <li class="bg-white p-4 rounded shadow" 
+                data-name="RSU Dadi Keluarga Purwokerto">
+                <h3 class="text-xl font-bold">RSU Dadi Keluarga Purwokerto</h3>
+                <p>Alamat: Jl. Dadi Keluarga No. 40, Purwokerto</p>
+                <p>Telepon: (0281) 990011</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.4106506464245!2d109.25038207476233!3d-7.447759492563348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655c3b5075d5b9%3A0xf2aad03254562c79!2sRSU%20Dadi%20Keluarga%20Purwokerto!5e1!3m2!1sid!2sid!4v1735713521556!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+            <!-- Tambahkan rumah sakit lainnya sesuai kebutuhan -->
+        </ul>
+        <div class="text-center mt-8">
+            <a href="landingpage.html" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Kembali ke
+                Home</a>
+        </div>
+    </div>
+
+    <footer class="bg-black text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <h1 class="text-white text-lg font-bold uppercase">Powerkerto</h1>
+                <p class="text-sm text-red-500">Smart City</p>
+            </div>
+            <nav class="mb-6">
+                <ul class="flex justify-center space-x-6 text-sm">
+                    <li><a href="#" class="hover:text-red-500">Home</a></li>
+                    <li><a href="#" class="hover:text-red-500">Layanan</a></li>
+                    <li><a href="#" class="hover:text-red-500">News</a></li>
+                    <li><a href="#" class="hover:text-red-500">Feedback</a></li>
+                    <li><a href="#" class="hover:text-red-500">Report</a></li>
+                    <li><a href="#" class="hover:text-red-500">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mb-6 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-red-500">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-red-500">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-red-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-red-500">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </div>
+            <p class="text-xs">
+                <!-- Tulis Alamat di Sini -->
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script untuk mencegah klik pada daftar rumah sakit - OPSIONAL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hospitalItems = document.querySelectorAll('.hospital-list li');
+            hospitalItems.forEach(function(item) {
+                item.style.cursor = 'default'; // Pastikan kursor default
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    // Jika ada aksi lain yang terpasang, Anda bisa menonaktifkannya di sini
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

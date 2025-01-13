@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+   <div class="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+    <div class="w-full max-w-md bg-white rounded border p-4">
+        <h2 class="text-xl font-bold mb-4">Feedback Form</h2>
+        <form onsubmit="handleSubmit(event)">
+          <div class="mb-4">
+            <label class="block text-gray-700">Name</label>
+            <input class="w-full bg-white text-gray-700 border rounded py-2 px-4 focus:outline-none focus:border-blue-500" type="text" placeholder="Enter Your Name"/>
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-gray-700">Email</label>
+            <input class="w-full bg-white text-gray-700 border rounded py-2 px-4 focus:outline-none focus:border-blue-500" type="email" placeholder="Enter Your Email"/>
+        </div> 
+        <div class="mb-4">
+            <label class="block text-gray-700">Massage</label>
+            <textarea class="w-full bg-white text-gray-700 border rounded py-2 px-4 focus:outline-none focus:border-blue-500" placeholder="Enter Your Massage" rows="4" placeholder="Enter Your Massage">
+            </textarea>
+        </div>
+        <div class="flex space-x-4 pb-5">
+            <button class="flex items-center space-x-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 focus:ring focus:ring-green-300">
+              <span>👍</span>
+              <span>Suka</span>
+            </button>
+          
+            <button class="flex items-center space-x-2 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 focus:ring focus:ring-yellow-300">
+              <span>😐</span>
+              <span>Biasa Saja</span>
+            </button>
+          
+            <button class="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 focus:ring focus:ring-red-300">
+              <span>👎</span>
+              <span>Tidak Suka</span>
+            </button>
+          </div>
+          <button class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors duration-200"> Submit</button>
+        </form>
+        
+    </div>
+   </div>
+   <script src="feedback.js"></script>
+</body>
+</html>
